@@ -1,0 +1,99 @@
+
+.conteinerSlider{
+    width: calc(100% - 22px);
+    margin: 12px auto;
+}
+.slider{
+    width: 100%;
+    color: var(--text--);
+}
+.item{
+    background-color: var(--border--);
+    padding: 12px;
+    border-radius: 6px;
+    margin: 3px auto;
+    gap: 22px;
+    display: flex;
+    height: 150px;
+    overflow: hidden;
+    overflow-y: auto;
+}
+.item > img{
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+    margin: 0 auto;
+    display: none;
+}
+.item > img.active{
+   display: block;
+   animation: animateSlide .3s linear;
+}
+@keyframes animateSlide {
+    from{
+        opacity: 0;
+        transform: translateX(12px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.thumbsSlide{
+    display: flex;
+}
+.thumbs{
+    display: flex;
+    justify-content:center;
+    gap: 3px;
+}
+.thumbs > span{
+    padding: 3px;
+    background-color: var(--border--);
+    border-radius: 50%;
+}
+.thumbs > span.active{
+    background-color: var(--card-hover--);
+}
+/* contentHome */
+.contentHome{
+    position: relative;
+    color: var(--text--);
+    padding: 12px;
+}
+.reciverData{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin: 12px auto;
+}
+.cards{
+    background-color: var(--border--);
+    padding: 12px;
+    border-radius: 6px;
+}
+.imageCard{
+    width: 100%;
+}
+.imageCard > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+}
+.bdr{
+    border-bottom: 1px solid var(--border--);
+    padding-bottom: 3px;
+}
+.cardButton{
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+.cardButton > button{
+    background-color: var(--button--);
+}
+.cardButton > button:focus,
+.cardButton > button:hover{
+    background-color: var(--button-2--);
+}

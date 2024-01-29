@@ -1,0 +1,104 @@
+.boduContainer{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-top: 65px;
+}
+.boduContainer.blur{
+    filter: blur(12px);
+}
+.Navigator{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 12px;
+    background-color: var(--darck-2--);
+    backdrop-filter: blur(12px);
+    border-top: 1px solid var(--border--);
+    display: flex;
+    justify-content: space-around;
+}
+.Navigator > button{
+    width: 33px;
+    height: 33px;
+}
+.Navigator > button.active{
+    background-color: var(--card-hover--);
+}
+/* PubCards */
+
+.pubLicity{
+    gap: 6px;
+    margin: 0 auto;
+    overflow-y:auto;
+    width: calc(100% - 22px);
+    max-height: 100%;
+    padding-bottom: 50px;
+}
+.pubLicity > .cdr{
+    min-width: 150px;
+    margin: 12px auto;
+    color: var(--text--);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity .3s ease;
+}
+.pubLicity > .cdr.animed{
+    opacity: 1;
+    animation: anidatedContent .3s linear;
+}
+@keyframes anidatedContent {
+    from{
+        transform: translateX(12px);
+    }
+    to{
+        transform: translateX(0);
+    }
+    
+}
+.cdr > .about > h3{
+   font-size: 14pt;
+}
+.cdr > .about > span{
+    font-size: 11pt;
+}
+.cdr > .image{
+    width: calc(100% - 12px);
+    height: calc(100% - 12px);
+}
+.cdr > .image > img{
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+    border: 1px solid var(--border--);
+    object-fit: cover;
+}
+.about{
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    width: 100%;
+}
+.buyButton{
+    padding: 12px;
+    border-radius: 6px;
+    font-weight: bold;
+    background-color: var(--button--);
+    color: var(--branca--);
+    margin-top: 3px;
+}
+.classfic >*{
+  color: var(--price--);
+}
+.price{
+    color: var(--price--);
+}
+.buyButton:hover,
+.buyButton:focus{
+    background-color: var(--button-2--);
+}

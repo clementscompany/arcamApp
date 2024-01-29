@@ -1,0 +1,96 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    border-bottom: 1px solid var(--border--);
+    z-index: 12;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--darck--);
+}
+.toggle{
+    width: 30px;
+    height: 30px;
+    border-radius: 6px;
+    background-color: var(--darck--);
+    color: var(--branca--);
+}
+.toggle > i{
+    color: var(--branca--);
+}
+.toggle:focus,
+.toggle:hover{
+    background-color: var(--base--);
+}
+.logoBtn{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.logoBtn > h1{
+    color: var(--text--);
+}
+.logoBtn > h1 > b{
+    color: var(--title-2--);
+}
+.logoBtn > button{
+    color: var(--darck--);
+}
+
+/* //leftContainer */
+.leftContainer > *{
+   color: var(--text--);
+}
+.leftContainer{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--base--);
+    width: calc(100% - 100px);   
+    height: 100%;
+    padding: 50px 12px;
+    transform: translateX(-100%);
+    transition: transform .3s ease-in-out;
+    z-index: 12;
+}
+.leftContainer.active{
+    transform: translateX(0);
+}
+.topAbsolute{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    border-bottom: 1px solid var(--border--);
+    padding: 12px;;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.topAbsolute > .person{
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+.cd{
+    background-color: var(--border--);
+    border-radius: 8px;
+    margin: 12px 0;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.alertMumber{
+    padding:3px 6px;
+    border-radius: 50%;
+    background-color: var(--border--);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* ipad */
+
